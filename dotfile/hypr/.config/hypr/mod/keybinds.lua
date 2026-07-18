@@ -5,6 +5,7 @@ local terminal = "kitty"
 local browser = "firefox"
 local fileManager = "dolphin"
 local tglbar = "pkill waybar || waybar"
+local printScreen = "hyprshot --mode region -o ~/Pictures/screenshots"
 
 local move_window_smart
 
@@ -18,7 +19,7 @@ hl.bind(super .. " + Q", hl.dsp.exec_cmd(terminal))
 hl.bind(super .. " + B", hl.dsp.exec_cmd(tglbar))
 hl.bind(super .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(super .. " + Z", hl.dsp.exec_cmd("zeditor"))
-hl.bind(super .. " + PRINT", hl.dsp.exec_cmd("hyprshot --mode region -o ~/Pictures/screenshots"))
+hl.bind(super .. " + PRINT", hl.dsp.exec_cmd(printScreen))
 hl.bind(super .. " + 1", hl.dsp.exec_cmd(terminal))
 hl.bind(super .. " + 2", hl.dsp.exec_cmd(browser))
 
