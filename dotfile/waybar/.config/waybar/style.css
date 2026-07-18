@@ -1,0 +1,78 @@
+window#waybar {
+    background-color: #1a1b26;
+    border-bottom: 2px solid #3b4261;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 14px;
+    color: #c0caf5;
+}
+
+/* Style for all modules globally */
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 5px;
+}
+
+#workspaces {
+    border-radius: 20px;
+    font-weight: bold;
+    background-color: #2b2b2b;
+    padding: 3 5px;
+}
+#workspaces button {
+    border-radius: 12px;
+    padding: 0 8px;
+    margin: 0 1px;
+    font-size: 16px;
+    color: #1a1a1a;
+    background-color: #1a1a1a;
+}
+
+#workspaces button.active {
+    border-radius: 20px;
+    color: black;
+    font-weight: bold;
+    padding: 0 25px;
+    margin: 0 5px;
+    background-color: #ffffff;
+}
+
+#clock {
+    /*background-color: #2b2b2b;*/
+    background-color: #7aa2f7;
+    padding: 0 10px;
+    border-radius: 8px;
+    color: #1a1b26;
+    font-weight: bold;
+}
+
+#network {
+    background-color: #2b2b2b;
+    padding: 0 10px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+#bluetooth {
+    background-color: #2b2b2b;
+    padding: 0 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#battery {
+    border-radius: 8px;
+    background-color: #2b2b2b;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+#battery.critical {
+    background-color: #f7768e;
+    color: #ffffff;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

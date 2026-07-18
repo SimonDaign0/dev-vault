@@ -1,0 +1,17 @@
+{
+    "For loop": {
+        "prefix": "fori",
+        "description": "inserts a fori loop",
+        "body": "for (int i = 0; i < $0; i++) {\n\n}"
+    },
+    "Printf": {
+        "prefix": "print",
+        "description": "inserts an empty printf with ln",
+        "body": "printf(\"$0\\n\");"
+    },
+    "Scanf": {
+        "prefix": "scan",
+        "description": "inserts an empty scanf",
+        "body": "scanf(\"%$0\");"
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "preview_tabs": {
+        "enabled": false,
+    },
+    "search": {
+        "button": false,
+    },
+    "collaboration_panel": {
+        "button": false,
+    },
+    "inline_code_actions": false,
+    "gutter": {
+        "runnables": false,
+        "folds": false,
+        "bookmarks": false,
+        "breakpoints": false,
+        "min_line_number_digits": 0,
+    },
+    "ui_font_weight": 400.0,
+    "ui_font_family": ".ZedMono",
+    "tab_size": 4,
+    "zoomed_padding": true,
+    "tab_bar": {
+        "show_tab_bar_buttons": false,
+    },
+    "mouse_wheel_zoom": true,
+    "minimum_split_diff_width": 100.0,
+    "format_on_save": "on",
+    "cli_default_open_behavior": "existing_window",
+    "autosave": "on_focus_change",
+    "disable_ai": true,
+    "terminal": {
+        "dock": "bottom",
+    },
+    "agent": {
+        "dock": "right",
+        "favorite_models": [],
+        "model_parameters": [],
+    },
+    "debugger": {
+        "dock": "right",
+    },
+    "outline_panel": {
+        "button": false,
+        "dock": "left",
+    },
+    "git_panel": {
+        "dock": "right",
+    },
+    "project_panel": {
+        "dock": "left",
+    },
+    "icon_theme": "Zed (Default)",
+    "buffer_font_family": "JetBrains Mono",
+    "base_keymap": "VSCode",
+    "ui_font_size": 19.0,
+    "buffer_font_size": 22.0,
+    // theme VSCode Dark Modern/ One Dark
+    "theme": "One Sat Dark",
+    /*
+    "syntax": {
+        "string": { "color": "#d99f84" },
+        "string.escape": { "color": "#d7ba7d" },
+        "keyword": { "color": "#61afef" },
+        "keyword.control": { "color": "#C586C0" },
+        "function": { "color": "#ebd073" },
+        "variable": { "color": "#9cdcfe" },
+        "comment": { "color": "#7f848e" },
+        "type": { "color": "#51dda8" },
+        "property": { "color": "#9cdcfe" },
+        "number": { "color": "#b9efaf" }, //#f9dfbf
+        "operator": { "color": "#DDDDDD" },
+        "boolean": { "color": "#569cd6" }
+    }
+    */
+}

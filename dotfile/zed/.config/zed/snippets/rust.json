@@ -1,0 +1,7 @@
+{
+    "Println": {
+        "prefix": "print",
+        "description": "println a value",
+        "body": "println!(\"{}\", $0);"
+    }
+}

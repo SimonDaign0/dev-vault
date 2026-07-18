@@ -1,0 +1,44 @@
+// documentation: https://zed.dev/docs/key-bindings
+[
+    {
+        "context": "Workspace",
+        "bindings": {
+            "alt-q": "workspace::ToggleLeftDock",
+            "ctrl-q": "workspace::ToggleLeftDock",
+            "alt-right": "pane::ActivateNextItem",
+            "alt-left": "pane::ActivatePreviousItem",
+            "ctrl-e": "project_panel::ToggleFocus",
+            "alt-e": "project_panel::ToggleFocus",
+            "ctrl-w": "workspace::CloseItemInAllPanes",
+            "ctrl-t": "theme_selector::Toggle",
+        },
+    },
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "enter": ["workspace::SendKeystrokes", "right ctrl-e"],
+            "right": "project_panel::Open",
+        },
+    },
+    {
+        "unbind": {
+            "ctrl-q": "zed::Quit",
+            "ctrl-b": "workspace::ToggleLeftDock",
+            "ctrl-e": "file_finder::Toggle",
+            "ctrl-tab": "tab_switcher::Toggle",
+            "enter": "project_panel::Rename",
+            "ctrl-w": "workspace::CloseActiveDock",
+            "ctrl-shift-c": "collab_panel::ToggleFocus",
+            "ctrl-shift-d": "debug_panel::ToggleFocus",
+        },
+    },
+]
+/*
+VIM
+{
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+        // "j k": "vim::NormalBefore"
+    },
+},
+*/

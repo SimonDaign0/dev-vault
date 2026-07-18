@@ -1,0 +1,87 @@
+// -*- mode: jsonc -*-
+{
+
+    // "layer": "top", // Waybar at top layer
+    "position":"top",
+    "height": 35, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    //"reload_style_on_change": true,
+    "rounding": 20,
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/applauncher"
+        //"custom/pacman"
+    ],
+    "modules-center": [
+        //"hyprland/window"
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "network",
+        "bluetooth",
+        "battery",
+        "clock"
+    ],
+
+    "bluetooth": {
+	"format": " {status}",
+	"format-connected": " {device_alias}",
+	"format-connected-battery": " {device_alias} {device_battery_percentage}%",
+	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+	"on-click": "pkill blueman-manager || blueman-manager"
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    /*
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    */
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{ipaddr} ({signalStrength})%",
+        "format-disconnected": "Disconnected ",
+        "format-disabled": "Disabled ",
+        "format-ethernet": "{ipaddr}",
+        "tooltip-format": "{essid}",
+        "on-click": "rofi-wifi-menu"
+    },
+    /*
+    "custom/pacman": {
+    	"format": " {}",
+    	"interval": "once",
+    	"exec": "checkupdates | wc -l",
+    	"on-click": "kitty --hold sudo pacman -Syu",
+    	"signal": 8,
+        "tooltip-format" : "{} updates available"
+    },
+    */
+    "custom/applauncher": {
+        "format": "",
+        "min-length": 4,
+        "on-click": "rofi -show drun",
+        "tooltip-format": "App launcher"
+    }
+}

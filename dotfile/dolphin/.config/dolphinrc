@@ -1,0 +1,37 @@
+MenuBar=Disabled
+
+[ContextMenu]
+ShowAddToPlaces=false
+ShowOpenInSplitView=false
+ShowViewMode=false
+
+[General]
+RememberOpenedTabs=false
+Version=202
+ViewPropsTimestamp=2026,7,15,2,9,29.878
+
+[IconsMode]
+IconSize=144
+PreviewSize=112
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+
+[MainWindow][Toolbar mainToolBar]
+IconSize=16
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,glycin-heif,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,fontthumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,glycin-svg,svgthumbnail
+
+[Shortcut Schemes]
+Current Scheme=open in zeditor
+
+[Toolbar mainToolBar]
+IconSize=16
+
+[UiSettings]
+ColorScheme=OxygenDark
