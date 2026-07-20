@@ -4,7 +4,7 @@ local ctrl_super_alt = "CONTROL + SUPER + ALT"
 local terminal = "kitty"
 local browser = "firefox"
 local fileManager = "dolphin"
-local tglbar = "pkill waybar || waybar"
+local tglbar = "killall waybar || waybar"
 local printScreen = "hyprshot --mode region -o ~/Pictures/screenshots"
 
 local move_window_smart

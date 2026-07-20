@@ -1,0 +1,9 @@
+[Unit]
+Description=battery-check service on a schedule
+
+[Timer]
+OnStartupSec=1min
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target

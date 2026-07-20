@@ -1,9 +1,10 @@
 #!/usr/bin/env bash
 
-#sddm
+# sddm
 sudo cp $(pwd)/sddm/theme.conf /etc/sddm.conf.d/
+&& echo "replaced sddm theme"
 
-#dotfile
+# dotfile
 cd "$(pwd)/dotfile"
 
 for entry in $(pwd)/*; do
