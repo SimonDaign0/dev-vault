@@ -16,7 +16,7 @@ alias py='python'
 alias fileshare="echo Ip adress: $(ip route get 1.1.1.1 | awk '{print $7; exit}' || 'Disconnected') && python -m http.server"
 
 parse_git_branch() {
-    git branch --show-current 2> /dev/null | awk '{print " ("$1")"}'
+    git branch --show-current 2> /dev/null
 }
 
-export PS1='\[\e[0m\][\u \[\e[38;5;209m\]\W\[\e[33m\]$(parse_git_branch)\[\e[0m\]]\$ '
+export PS1='\[\e[0m\][\u \[\e[38;5;209m\]\W$(BRANCH=$(parse_git_branch); [[ -n "$BRANCH" ]] && echo " \[\e[33m\]($BRANCH)")\[\e[0m\]]\$ '
