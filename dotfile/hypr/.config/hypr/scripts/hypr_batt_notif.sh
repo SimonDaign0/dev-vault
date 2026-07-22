@@ -11,7 +11,7 @@
 sleep 0.4 # Give the system time to write the state to the files
 
 LOW_THRESHOLD=20
-CRITICAL_THRESHOLD=10
+CRITICAL_THRESHOLD=15
 
 LOW_STATE_FILE=/tmp/battery_low_notified.lock
 CRITICAL_STATE_FILE=/tmp/battery_critical_notified.lock
@@ -32,9 +32,9 @@ elif [[ "$STATUS" == "Charging" ]] || [[ $CAPACITY -gt $LOW_THRESHOLD ]]; then
     if [[ -f $CRITICAL_STATE_FILE ]]; then
         rm -f $CRITICAL_STATE_FILE $LOW_STATE_FILE
         brightnessctl -qr > /dev/null #-q flag does not work..
-        hyprctl -q notify 1 10000 "rgb(0000FF)" "fontsize:20 Charging "
+        hyprctl -q notify 1 4000 "rgb(0000FF)" "fontsize:20 Charging "
     elif [[ -f $LOW_STATE_FILE ]]; then
         rm -f $LOW_STATE_FILE
-        hyprctl -q notify 1 10000 "rgb(0000FF)" "fontsize:20 Charging "
+        hyprctl -q notify 1 4000 "rgb(0000FF)" "fontsize:20 Charging "
     fi
 fi

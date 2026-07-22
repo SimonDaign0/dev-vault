@@ -1,8 +1,12 @@
 #!/usr/bin/env bash
 
 # sddm
-sudo cp $(pwd)/sddm/theme.conf /etc/sddm.conf.d/
+sudo cp $(pwd)/sddm/theme.conf /etc/sddm.conf.d/ \
 && echo "replaced sddm theme"
+
+# root bashrc
+sudo cp $(pwd)/root/.bashrc /root/.bashrc \
+&& echo "replaced root .bashrc"
 
 # dotfile
 cd "$(pwd)/dotfile"

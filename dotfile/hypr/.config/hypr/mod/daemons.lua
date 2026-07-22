@@ -1,6 +1,7 @@
 -- kwallet
 hl.on("hyprland.start", function()
-    hl.exec_cmd("/usr/lib/pam_kwallet_init")
+    hl.exec_cmd("dbus-update-activation-environment")
+    hl.exec_cmd("gnome-keyring-daemon")
     hl.exec_cmd("hypridle")
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("brightnessctl -s set 50%")
