@@ -1,4 +1,3 @@
--- kwallet
 hl.on("hyprland.start", function()
     hl.exec_cmd("dbus-update-activation-environment")
     hl.exec_cmd("gnome-keyring-daemon")

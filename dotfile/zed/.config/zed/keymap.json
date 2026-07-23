@@ -1,25 +1,8 @@
 // documentation: https://zed.dev/docs/key-bindings
 [
-    {
-        "context": "Workspace",
-        "bindings": {
-            "alt-q": "workspace::ToggleLeftDock",
-            "ctrl-q": "workspace::ToggleLeftDock",
-            "alt-right": "pane::ActivateNextItem",
-            "alt-left": "pane::ActivatePreviousItem",
-            "ctrl-e": "project_panel::ToggleFocus",
-            "alt-e": "project_panel::ToggleFocus",
-            "ctrl-w": "workspace::CloseItemInAllPanes",
-            "ctrl-t": "theme_selector::Toggle",
-        },
-    },
-    {
-        "context": "ProjectPanel",
-        "bindings": {
-            "enter": ["workspace::SendKeystrokes", "right ctrl-e"],
-            "right": "project_panel::Open",
-        },
-    },
+    // =================
+    // ==== Unbinds ====
+    // =================
     {
         "unbind": {
             "ctrl-q": "zed::Quit",
@@ -30,6 +13,104 @@
             "ctrl-w": "workspace::CloseActiveDock",
             "ctrl-shift-c": "collab_panel::ToggleFocus",
             "ctrl-shift-d": "debug_panel::ToggleFocus",
+            "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
+            "ctrl-shift-down": [
+                "editor::SelectNext",
+                { "replace_newest": false },
+            ],
+            "ctrl-shift-up": [
+                "editor::SelectPrevious",
+                { "replace_newest": false },
+            ],
+            "ctrl-up": "editor::LineUp",
+            "ctrl-down": "editor::LineDown",
+            "ctrl-shift-a": "editor::SelectAll",
+            "ctrl-alt-l": "lsp_tool::ToggleMenu",
+            "ctrl-shift-l": "editor::SelectAllMatches",
+            "ctrl-shift-enter": "repl::Run",
+            "ctrl-+": ["zed::IncreaseBufferFontSize", { "persist": false }],
+        },
+    },
+    {
+        "context": "Workspace",
+        "bindings": {
+            // ===============
+            // ==== Binds ====
+            // ===============
+            "ctrl-+": ["zed::IncreaseUiFontSize", { "persist": false }],
+            "ctrl-_": ["zed::DecreaseUiFontSize", { "persist": false }],
+            "alt-q": "workspace::ToggleLeftDock",
+            "ctrl-q": "workspace::ToggleLeftDock",
+            "alt-right": "pane::ActivateNextItem",
+            "alt-left": "pane::ActivatePreviousItem",
+            "ctrl-e": "project_panel::ToggleFocus",
+            "alt-e": "project_panel::ToggleFocus",
+            "ctrl-w": "workspace::CloseItemInAllPanes",
+            "ctrl-t": "theme_selector::Toggle",
+            "alt-]": "editor::MoveToEnclosingBracket",
+            "ctrl-shift-a": "editor::SelectLargerSyntaxNode",
+            "ctrl-shift-q": "editor::SelectSmallerSyntaxNode", // Toggle Status Bar at the bottom
+            // ===================
+            // ==== Sequences ====
+            // ===================
+            "ctrl-d": [
+                "action::Sequence",
+                [
+                    "editor::MoveToNextWordEnd",
+                    "editor::MoveToPreviousWordStart",
+                    "editor::DeleteToNextWordEnd",
+                ],
+            ],
+            "ctrl-up": [
+                "action::Sequence",
+                [
+                    "editor::MoveUp",
+                    "editor::MoveUp",
+                    "editor::MoveUp",
+                    "editor::MoveUp",
+                ],
+            ],
+            "ctrl-down": [
+                "action::Sequence",
+                [
+                    "editor::MoveDown",
+                    "editor::MoveDown",
+                    "editor::MoveDown",
+                    "editor::MoveDown",
+                ],
+            ],
+            // =================
+            // ==== Strokes ====
+            // =================
+            "ctrl-shift-up": [
+                "workspace::SendKeystrokes",
+                "shift-up shift-up shift-up shift-up",
+            ],
+            "ctrl-shift-down": [
+                "workspace::SendKeystrokes",
+                "shift-down shift-down shift-down shift-down",
+            ],
+            "ctrl-shift-l": ["workspace::SendKeystrokes", "ctrl-shift-k home"],
+            "ctrl-shift-d": [
+                "workspace::SendKeystrokes",
+                "ctrl-shift-k up ctrl-enter",
+            ],
+        },
+    },
+    // ===================
+    // ==== Left dock ====
+    // ===================
+    {
+        "context": "ProjectPanel",
+        "bindings": {
+            "enter": ["workspace::SendKeystrokes", "right ctrl-e"],
+            "right": "project_panel::Open",
+        },
+    },
+    {
+        "context": "ImageViewer",
+        "unbind": {
+            "ctrl-+": "image_viewer::ZoomIn",
         },
     },
 ]

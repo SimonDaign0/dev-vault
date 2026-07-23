@@ -3,4 +3,4 @@ Description=Check and notify if battery % is low or critical
 
 [Service]
 Type=oneshot
-ExecStart=%h/.config/hypr/scripts/hypr_batt_notif.sh
+ExecStart=%h/.config/hypr/scripts/hypr_batt_notif

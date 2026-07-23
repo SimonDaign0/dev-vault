@@ -1,0 +1,7 @@
+#!/bin/bash
+
+CURR_POURCENT=$(brightnessctl -m | cut -d',' -f4)
+
+if [[ "${CURR_POURCENT%?}" -ge "15" ]]; then
+    brightnessctl set 10%-
+fi

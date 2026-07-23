@@ -32,6 +32,11 @@ hl.gesture({
     direction = "horizontal",
     action = "workspace",
 })
+hl.gesture({
+    fingers = 3,
+    direction = "vertical",
+    action = "workspace",
+})
 
 -- Example per-device config
 hl.device({

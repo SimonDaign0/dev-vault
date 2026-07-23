@@ -2,6 +2,27 @@
     "preview_tabs": {
         "enabled": false,
     },
+    "tab_bar": {
+        "show_tab_bar_buttons": false,
+        "show_nav_history_buttons": true,
+        "show": true,
+    },
+    "toolbar": {
+        "breadcrumbs": false,
+        "quick_actions": false,
+        "selections_menu": false,
+    },
+
+    "title_bar": {
+        "show_menus": false,
+        "show_branch_name": false,
+        "show_project_items": false,
+        "show_branch_status_icon": false,
+        "show_onboarding_banner": false,
+        "show_sign_in": true,
+        "show_user_picture": true,
+        "show_user_menu": true,
+    },
     "search": {
         "button": false,
     },
@@ -20,9 +41,6 @@
     "ui_font_family": ".ZedMono",
     "tab_size": 4,
     "zoomed_padding": true,
-    "tab_bar": {
-        "show_tab_bar_buttons": false,
-    },
     "mouse_wheel_zoom": true,
     "minimum_split_diff_width": 100.0,
     "format_on_save": "on",

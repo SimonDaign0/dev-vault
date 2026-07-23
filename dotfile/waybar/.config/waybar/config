@@ -3,15 +3,17 @@
 
     // "layer": "top", // Waybar at top layer
     "position":"top",
-    "height": 35, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     //"reload_style_on_change": true,
     "rounding": 20,
     // Choose the order of the modules
     "modules-left": [
-        "custom/applauncher"
         //"custom/pacman"
+        "custom/applauncher",
+        "custom/brightnessdec",
+        "custom/brightnessinfo",
+        "custom/brightnessinc"
     ],
     "modules-center": [
         //"hyprland/window"
@@ -83,5 +85,26 @@
         "min-length": 4,
         "on-click": "rofi -show drun",
         "tooltip-format": "App launcher"
+    },
+    "custom/brightnessdec": {
+        "format": "-",
+        "min-length": 2,
+        "on-click": "sh $HOME/.config/waybar/scripts/dec_brightness && pkill -RTMIN+8 waybar",
+        "tooltip-format": "reduce the brightness by 10%"
+    },
+    "custom/brightnessinfo": {
+        "format": "{}",
+        "exec": "brightnessctl -m | cut -d',' -f4",
+        "min-length": 2,
+        "signal": 8,
+        "on-update": "brightnessctl -m | cut -d',' -f4",
+        "on-click": "brightnessctl -m | cut -d',' -f4",
+        "tooltip-format": "Current brightness"
+    },
+    "custom/brightnessinc": {
+        "format": "+",
+        "min-length": 2,
+        "on-click": "brightnessctl set 10%+ && pkill -RTMIN+8 waybar",
+        "tooltip-format": "increase the brightness by 10%"
     }
 }
