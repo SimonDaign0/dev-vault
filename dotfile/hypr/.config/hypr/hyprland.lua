@@ -17,6 +17,9 @@ hl.config({
         kb_options   = "",
         kb_rules     = "",
 
+        repeat_rate  = 25,
+        repeat_delay = 250,
+
         follow_mouse = 1,
 
         sensitivity  = 0.5, -- -1.0 - 1.0, 0 means no modification.

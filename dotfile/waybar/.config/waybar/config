@@ -89,7 +89,7 @@
     "custom/brightnessdec": {
         "format": "-",
         "min-length": 2,
-        "on-click": "sh $HOME/.config/waybar/scripts/dec_brightness && pkill -RTMIN+8 waybar",
+        "on-click": "$HOME/.config/waybar/scripts/dec_brightness && pkill -RTMIN+8 waybar",
         "tooltip-format": "reduce the brightness by 10%"
     },
     "custom/brightnessinfo": {
