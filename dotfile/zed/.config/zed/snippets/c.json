@@ -4,6 +4,11 @@
         "description": "inserts a fori loop",
         "body": "for (int i = 0; i < $0; i++) {\n\n}"
     },
+    "Alt For loop": {
+        "prefix": "forj",
+        "description": "inserts a forj loop",
+        "body": "for (int j = 0; j < $0; j++) {\n\n}"
+    },
     "Printf": {
         "prefix": "print",
         "description": "inserts an empty printf with ln",

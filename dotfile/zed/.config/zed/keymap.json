@@ -47,7 +47,6 @@
             "alt-e": "project_panel::ToggleFocus",
             "ctrl-w": "workspace::CloseItemInAllPanes",
             "ctrl-t": "theme_selector::Toggle",
-            "alt-]": "editor::MoveToEnclosingBracket",
             "ctrl-shift-a": "editor::SelectLargerSyntaxNode",
             "ctrl-shift-q": "editor::SelectSmallerSyntaxNode", // Toggle Status Bar at the bottom
             // ===================

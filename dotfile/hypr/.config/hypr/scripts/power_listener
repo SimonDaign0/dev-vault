@@ -1,5 +1,5 @@
 #!/bin/bash
 
 upower --monitor | while read -r line; do
-    echo "$line" | grep -q "line_power" $HOME/.config/hypr/scripts/hypr_batt_notif
+    echo "$line" | grep -q "line_power" && $HOME/.config/hypr/scripts/hypr_batt_notif
 done
