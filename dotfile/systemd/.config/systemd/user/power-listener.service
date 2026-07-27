@@ -1,0 +1,12 @@
+[Unit]
+Description=Listens to changes in AC
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/.config/hypr/scripts/power_listener
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

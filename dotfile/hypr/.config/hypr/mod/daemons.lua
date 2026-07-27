@@ -9,6 +9,7 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("hyprpaper")
     hl.exec_cmd("brightnessctl -s set 50%")
     hl.exec_cmd("waybar")
-    hl.exec_cmd("$HOME/.config/hypr/scripts/power_listener")
     hl.exec_cmd("hyprsunset")
+    -- only way to make it work with upower for some reason
+    hl.exec_cmd("systemctl --user start power-listener.service")
 end)
