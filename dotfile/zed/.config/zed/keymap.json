@@ -13,7 +13,9 @@
             "ctrl-w": "workspace::CloseActiveDock",
             "ctrl-shift-c": "collab_panel::ToggleFocus",
             "ctrl-shift-d": "debug_panel::ToggleFocus",
+            "ctrl-j": "workspace::ToggleBottomDock",
             "ctrl-d": ["editor::SelectNext", { "replace_newest": false }],
+            "ctrl-shift-a": "editor::ToggleBlockComments",
             "ctrl-shift-down": [
                 "editor::SelectNext",
                 { "replace_newest": false },
@@ -24,7 +26,7 @@
             ],
             "ctrl-up": "editor::LineUp",
             "ctrl-down": "editor::LineDown",
-            "ctrl-shift-a": "editor::SelectAll",
+            //"ctrl-shift-a": "editor::SelectAll",
             "ctrl-alt-l": "lsp_tool::ToggleMenu",
             "ctrl-shift-l": "editor::SelectAllMatches",
             "ctrl-shift-enter": "repl::Run",
@@ -37,6 +39,7 @@
             // ===============
             // ==== Binds ====
             // ===============
+            "ctrl-alt-/": "editor::ToggleBlockComments",
             "ctrl-+": ["zed::IncreaseUiFontSize", { "persist": false }],
             "ctrl-_": ["zed::DecreaseUiFontSize", { "persist": false }],
             "alt-q": "workspace::ToggleLeftDock",
@@ -48,7 +51,7 @@
             "ctrl-w": "workspace::CloseItemInAllPanes",
             "ctrl-t": "theme_selector::Toggle",
             "ctrl-shift-a": "editor::SelectLargerSyntaxNode",
-            "ctrl-shift-q": "editor::SelectSmallerSyntaxNode", // Toggle Status Bar at the bottom
+            "ctrl-shift-q": "editor::SelectSmallerSyntaxNode",
             // ===================
             // ==== Sequences ====
             // ===================
@@ -84,6 +87,10 @@
                 "workspace::SendKeystrokes",
                 "ctrl-shift-k up ctrl-enter",
             ],
+            // =====================
+            // ==== Tasks ====
+            // =====================
+
             // =====================
             // ==== Temp macros ====
             // =====================

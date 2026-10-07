@@ -68,7 +68,7 @@
         "format-disabled": "Disabled ",
         "format-ethernet": "{ipaddr}",
         "tooltip-format": "{essid}",
-        "on-click": "rofi-wifi-menu"
+        "on-click": "nmtui"
     },
     /*
     "custom/pacman": {

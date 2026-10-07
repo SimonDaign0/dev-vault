@@ -1,0 +1,23 @@
+{
+    "Println": {
+        "prefix": "print",
+        "body": "cout << \"$0\" << endl;"
+    },
+    "enhanced for loop": {
+        "prefix": "for",
+        "body": "for (int val : $0) {\n\n}"
+    },
+    "For i loop": {
+        "prefix": "fori",
+        "body": "for (int i = 0; i < $0; i++) {\n\n}"
+    },
+    "For j loop": {
+        "prefix": "forj",
+        "body": "for (int j = 0; j < $0; j++) {\n\n}"
+    },
+
+    "Enhanced For loop": {
+        "prefix": "for",
+        "body": "for (int i : $0) {\n\n}"
+    }
+}

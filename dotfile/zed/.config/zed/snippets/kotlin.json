@@ -1,0 +1,47 @@
+{
+    "Println": {
+        "prefix": "print",
+        "description": "println a value",
+        "body": "println(\"$0\")"
+    },
+    "For loop": {
+        "prefix": "fori",
+        "description": "inserts a fori loop",
+        "body": "for (i in 0..$0) {\n\n}"
+    },
+    "Alt For loop": {
+        "prefix": "forj",
+        "description": "inserts a forj loop",
+        "body": "for (j in 0..$0) {\n\n}"
+    },
+    "try catchs": {
+        "prefix": "try",
+        "description": "makes a try/catch block",
+        "body": "try {\n\n} catch (e: $0) {\n\n}"
+    },
+    "While loop": {
+        "prefix": "while",
+        "description": "inserts a while loop",
+        "body": "while (ctr < $0) {\n\n}"
+    },
+    "when block form match": {
+        "prefix": "match",
+        "description": "makes a when block",
+        "body": "val tmp = when ($0) {\n\n}"
+    },
+    "when block from when": {
+        "prefix": "when",
+        "description": "makes a when block",
+        "body": "val tmp = when ($0) {\n\n}"
+    },
+    "primitives int": {
+        "prefix": "int",
+        "description": "Capitalises int to Int",
+        "body": "Int"
+    },
+    "primitive string": {
+        "prefix": "string",
+        "description": "Capitalises string to String",
+        "body": "String"
+    }
+}
