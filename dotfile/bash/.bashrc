@@ -29,6 +29,8 @@ alias horaire='imv ~/Pictures/horaire.png'
 alias shark='xhost +si:localuser:root && sudo -E wireshark'
 alias replay='sudo tcpreplay -i wlo1'
 alias trans='z /app-php && exit'
+alias proto="cd ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/ && ./proto"
+
 
 parse_git_branch() {
     git branch --show-current 2> /dev/null
