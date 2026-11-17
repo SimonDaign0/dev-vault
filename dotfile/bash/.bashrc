@@ -29,7 +29,6 @@ alias horaire='imv ~/Pictures/horaire.png'
 alias shark='xhost +si:localuser:root && sudo -E wireshark'
 alias replay='sudo tcpreplay -i wlo1'
 alias trans='z /app-php && exit'
-alias proto="cd ~/.steam/steam/steamapps/common/Counter-Strike\ Global\ Offensive/game/csgo/cfg/ && ./proto"
 
 
 parse_git_branch() {
@@ -37,4 +36,5 @@ parse_git_branch() {
 }
 
 export PS1='\[\e[0m\][\u \[\e[38;5;209m\]\W$(BRANCH=$(parse_git_branch); [[ -n "$BRANCH" ]] && echo " \[\e[33m\]($BRANCH)")\[\e[0m\]]\$ '
-export PATH="$HOME/.cargo/bin:$PATH"
+alias sdn="shutdown now"
+alias run="cargo run -q"

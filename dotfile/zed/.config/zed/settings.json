@@ -1,4 +1,21 @@
 {
+    "lsp": {
+        "vtsls": {
+            "settings": {
+                "typescript": {
+                    "updateImportsOnFileMove": {
+                        "enabled": "always",
+                    },
+                },
+                "javascript": {
+                    "updateImportsOnFileMove": {
+                        "enabled": "always",
+                    },
+                },
+            },
+            "enable_lsp_tasks": true,
+        },
+    },
     "preview_tabs": {
         "enabled": false,
     },
@@ -52,6 +69,7 @@
         "dock": "bottom",
     },
     "agent": {
+        "default_profile": "ask",
         "dock": "right",
         "favorite_models": [],
         "model_parameters": [],

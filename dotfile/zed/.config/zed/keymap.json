@@ -5,6 +5,7 @@
     // =================
     {
         "unbind": {
+            "ctrl-'": "editor::ToggleSelectedDiffHunks",
             "ctrl-q": "zed::Quit",
             "ctrl-b": "workspace::ToggleLeftDock",
             "ctrl-e": "file_finder::Toggle",
@@ -39,7 +40,7 @@
             // ===============
             // ==== Binds ====
             // ===============
-            "ctrl-alt-/": "editor::ToggleBlockComments",
+            "ctrl-'": "editor::ToggleBlockComments",
             "ctrl-+": ["zed::IncreaseUiFontSize", { "persist": false }],
             "ctrl-_": ["zed::DecreaseUiFontSize", { "persist": false }],
             "alt-q": "workspace::ToggleLeftDock",
